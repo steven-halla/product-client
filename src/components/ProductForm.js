@@ -8,7 +8,7 @@ export default () => {
 
     const onSubmitHandler = event => {
         event.preventDefault();
-        axios.post('http://localhost:8080/api/product', {
+        axios.post('http://localhost:8071/api/product', {
             title,
             price,
             description
