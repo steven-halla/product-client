@@ -13,11 +13,14 @@ export default () => {
                 setLoaded(true);
             });
     },[])
+    const removeFromDom = productId => {
+        setProduct(product.filter(product => product._id != productId));
+    }
     return (
         <div>
             <ProductForm/>
             <hr/>
-            {loaded && <ProductView product={product}/>}
+            {loaded && <ProductView product={product} removeFromDom={removeFromDom} />}
         </div>
     )
 }
